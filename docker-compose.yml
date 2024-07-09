@@ -1,0 +1,47 @@
+services:
+  #Database
+  sms_db:
+    image: mariadb:11.3.2
+    volumes:
+      - ./db_data:/var/lib/mysql
+    restart: always
+    env_file: .env
+    environment:
+      MARIADB_ROOT_PASSWORD: $MARIADB_ROOT_PASSWORD
+      MARIADB_DATABASE: wordpress
+    container_name: sms_db
+  #Web
+  sms_wp:
+    depends_on:
+      - sms_db
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    ports:
+      - 8099:80
+    restart: always
+    env_file: .env
+    environment:
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_HOST: sms_db
+      WORDPRESS_DB_USER: $MYSQL_USER
+      WORDPRESS_DB_PASSWORD: $MYSQL_PASSWORD
+      WORDPRESS_TABLE_PREFIX: wp_
+    container_name: sms_wp
+    volumes:
+      - ./wp-content:/var/www/html/wp-content
+  #PhpMyAdmin
+  sms_myadmin:
+    image: phpmyadmin:latest
+    container_name: sms_myadmin
+    restart: "no"
+    ports:
+      - 5019:80
+    environment:
+      PMA_HOST: sms_db
+      UPLOAD_LIMIT: 100M
+    depends_on:
+      - sms_db
+volumes:
+  db_data:
+  wp-content:

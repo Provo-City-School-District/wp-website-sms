@@ -1,0 +1,619 @@
+/*
+ Theme Name:   Dixon Child (PCSD 2019 Theme)
+ Theme URI:    https://dixon.provo.edu/
+ Description:  Dixon Middle School Child theme of the Provo School District 2019 Theme
+ Author:       Josh Espinoza, Rob Francom, Shauna Sprunger
+ Author URI:   https://tech.provo.edu
+ Template:     pcsd-2019-theme
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  dms-child
+*/
+/*================================================================================================================
+Variables
+================================================================================================================*/
+:root {
+	--primary-color: #131723;
+	--secondary-color: #f57721;
+	--offset-color: #ffff21;
+	--grid-odd-clr: #e1e9f4;
+	--grid-even-clr: #cddbee;
+}
+
+/*================================================================================================================
+Fonts
+================================================================================================================*/
+@font-face {
+	font-family: "Arial Black";
+	src: local("Arial Black"),
+		url("../dms-child/fonts/Arial-Black.ttf");
+}
+
+/*================================================================================================================
+Theme specific coloring
+================================================================================================================*/
+#mainSidebar,
+#mainFooter {
+	background-color: var(--primary-color);
+}
+
+#contentArea {
+	background-color: var(--offset-color);
+	top: 200px;
+}
+
+a {
+	text-decoration: none;
+	color: #45579c;
+}
+
+a:hover {
+	color: var(--secondary-color);
+}
+
+nav>ul>li:hover>a {
+	color: #69aae0;
+}
+
+#teacherAccess {
+	background-color: #324145;
+}
+
+#mainHeader .contactinfo {
+	color: var(--offset-color);
+}
+
+#breadcrumbs,
+#breadcrumbs a {
+	color: var(--primary-color);
+}
+
+#teacherAccess {
+	background-color: var(--primary-color);
+}
+
+/*============================
+Post grid
+==============================*/
+.searchResults .post:nth-child(even),
+.postgrid .post:nth-child(even),
+.staff-member-listing .personalvCard:nth-child(even) {
+	background-color: var(--grid-odd-clr);
+}
+
+.searchResults .post:nth-child(odd),
+.postgrid .post:nth-child(odd),
+.staff-member-listing .personalvCard:nth-child(odd) {
+	background-color: var(--grid-even-clr);
+}
+
+#mainHeader #cludo-search-form .search-submit {
+	background-color: var(--primary-color);
+}
+
+/*=============================
+tile coloring
+===============================*/
+.tiles .tile:nth-child(even) {
+	background-color: #e1e9f4;
+}
+
+.tiles .tile:nth-child(odd) {
+	background-color: #cddbee;
+}
+
+/*============================
+Fonts
+===============================*/
+body {
+	font-family: Arial;
+	color: #02224f;
+}
+
+/*==================================================
+Heading Styles
+====================================================*/
+h1,
+h2,
+h3,
+h4 {
+	font-family: 'Arial Black', Arial;
+	/*font-weight: 800;*/
+	color: #02224f;
+	line-height: 1.05em;
+}
+
+#mainContent h1 {
+	margin-bottom: 20px;
+}
+
+#mainContent h2,
+#mainContent h3,
+#mainContent h4 {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+a h2 {
+	color: #45579c;
+}
+
+a h2:hover {
+	color: var(--secondary-color);
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+ul li~h3 {
+	list-style: none;
+}
+
+/*================================================================================================================
+header styles
+================================================================================================================*/
+#mainHeader {
+	height: 115px;
+}
+
+#mainHeader #siteLogo {
+	position: absolute;
+	max-width: 440px;
+
+	top: 0;
+}
+
+#mainHeader h1 {
+	position: absolute;
+	/* left: 127px; */
+	left: -9999px;
+	top: 8px;
+	color: #fff;
+	font-family: 'Arial Black', Arial;
+	font-weight: 800;
+}
+
+#mainSidebar h1 {
+	font-size: 1.8em;
+	color: #fff;
+}
+
+#mainSidebar h2 {
+	font-size: 1.6em;
+}
+
+#mainHeader {
+	/*  background-image: url('https://timpview.provo.edu/wp-content/themes/timpview-child/assets/images/header-background.jpg'); */
+	background-color: #000;
+}
+
+#mainHeader .contactinfo li span.phone,
+#mainHeader .contactinfo li span.fax {
+	margin-left: 17px;
+}
+
+@media (min-width: 866px) {}
+
+@media (max-width: 1360px) {}
+
+@media (max-width: 1238px) {
+	#mainHeader aside {
+		right: 0px;
+		top: 25px;
+		left: unset;
+	}
+}
+
+@media (max-width: 980px) {
+	#mainHeader aside {
+		position: relative;
+		width: 100%;
+		bottom: 0;
+		top: unset;
+		left: unset;
+		margin-top: 0px;
+	}
+
+	#mainHeader #cludo-search-form .search-input {
+		width: calc(100% - 35px);
+		left: 0px;
+	}
+
+	#mainHeader #siteLogo {
+		max-height: 50%;
+		width: auto;
+		max-width: auto;
+		padding: 0;
+		margin: 0 auto;
+		display: block;
+		position: inherit;
+	}
+
+	/* #mainHeader #cludo-search-form .search-input,
+	#mainHeader #cludo-search-form .search-submit,
+	#mainHeader .sociallinks {
+		position: relative;
+		
+	} */
+
+}
+
+/* @media (max-width: 920px) {
+	#mainHeader .sociallinks {
+		display: none;
+	}
+
+} */
+
+@media (min-width: 850px) {
+	/* #mainHeader #siteLogo {
+		width: 545px;
+		margin-top: -20px;
+		margin-left: -45px;
+	} */
+}
+
+@media (max-width: 865px) {
+	/* #mainHeader aside {
+		position: absolute;
+
+		right: -10px;
+		top: 90px;
+		width: 80%
+	} */
+}
+
+@media (max-width: 800px) {
+	#contentArea {
+		margin-top: 175px;
+	}
+
+	/* #mainHeader {
+		padding: 0 0 0 0;
+	}
+
+	#mainHeader #siteLogo {
+		max-height: 65%;
+		padding: 0;
+		margin: 0 auto;
+
+		display: block;
+		position: inherit;
+	}
+
+	#mainHeader aside {
+		position: initial;
+		width: 100%;
+		text-align: center;
+	}
+
+	#mainHeader aside form {
+		height: auto;
+		max-height: 25px;
+
+	}
+
+	#mainHeader .search-input,
+	#mainHeader .search-submit,
+	#mainHeader #cludo-search-form .search-submit,
+	#mainHeader #cludo-search-form .search-input {
+		position: initial;
+		height: auto;
+		margin-top: 5px;
+	}
+
+	#mainHeader #cludo-search-form .search-input {
+		max-width: calc(100% - 100px);
+		margin-left: 25px;
+
+	}
+
+	#mainHeader #cludo-search-form .search-submit {
+		display: inline;
+		max-height: 25px;
+	}
+
+	#pcsdBranding h1 {
+		font-size: 15px;
+	}
+
+	#mainHeader .contactinfo {
+		width: 100%;
+		margin: 0;
+		text-align: center;
+	} */
+}
+
+@media (max-width: 600px) {
+
+	#mainHeader #cludo-search-form .search-input,
+	#mainHeader #cludo-search-form .search-submit {
+		top: 0;
+	}
+}
+
+@media (max-width: 500px) {
+	#mainHeader .contactinfo .fax {
+		display: none;
+	}
+}
+
+/*================================================================================================================
+Main Menu
+================================================================================================================*/
+#mainMenu {
+	background-color: var(--primary-color);
+	font-family: 'Arial Black', Arial;
+	box-shadow: 1px 3px 5px var(--offset-color);
+	top: 147px;
+}
+
+#mainMenu>ul>li>a {
+	color: var(--offset-color);
+}
+
+#mainMenu>ul>li>a:hover {
+	color: #fff;
+}
+
+.mega-menu {
+	background: rgba(240, 240, 240, 0.97);
+	box-shadow: 1px 3px 5px var(--primary-color);
+}
+
+@media (max-height: 544px) {
+	#mainMenu {
+		top: 140px !important;
+	}
+
+	#reveal-menu[type="checkbox"]:checked~.mobile-menu {
+		top: 25px !important;
+	}
+
+	#contentArea {
+		margin-top: 0 !important;
+	}
+}
+
+/*==================================================
+list icon color adjustments
+====================================================*/
+#mainMenu ul li.intern,
+#mainMenu ul li.int {
+	list-style-image: url(../pcsd-2019-theme/assets/icons/file-blue.png) !important;
+}
+
+#mainSidebar ul li.intern,
+#mainSidebar ul li.int {
+	list-style-image: url(../pcsd-2019-theme/assets/icons/file-white.png) !important;
+}
+
+#mainMenu ul li.ext {
+	list-style-image: url(../pcsd-2019-theme/assets/icons/external-blue.png) !important;
+}
+
+#mainSidebar ul li.ext {
+	list-style-image: url(../pcsd-2019-theme/assets/icons/external-white.png) !important;
+}
+
+/* @media (max-width: 1570px) {
+	#mainMenu>ul>li {
+		padding: 0 2.5%;
+	}
+}
+
+@media (max-width: 1500px) {
+	#mainMenu>ul>li {
+		padding: 0 2%;
+	}
+}
+
+@media (max-width: 1375px) {
+	#mainMenu>ul>li {
+		padding: 0 1.5%;
+	}
+}
+
+@media (max-width: 1292px) {
+	#mainMenu>ul>li {
+		padding: 0 1%;
+	}
+}
+
+@media (max-width: 1000px) {
+	#mainMenu>ul>li {
+		padding: 0 0.5%;
+	}
+} */
+
+/*@media (max-width: 1220px) {
+	#mainMenu > ul > li {
+		width: 30%;
+		padding: 0 1% 0 1%;
+	}
+	#mainMenu > ul > li:first-child {padding-left: 1%;}
+	.mega-menu {top: 192px;}
+}
+@media (max-width: 934px) {
+	#mainMenu > ul > li {
+		width: 32%;
+		padding: 0;
+	}
+	#mainMenu > ul > li:first-child {padding-left: 0;}
+	.desktop-menu {padding-left: 10px;}
+}*/
+/* @media (max-width: 1222px) {
+	#mainMenu > ul > li {
+		padding: 0 0.5%;
+	}
+} */
+@media (max-width: 1000px) {
+	.desktop-menu {
+		display: none;
+	}
+
+	#mainMenu {
+		top: 175px;
+	}
+
+	#mainMenu .mobileMenu {
+		display: block;
+		color: #fff;
+		margin-left: 10px;
+		font-size: 16px;
+	}
+
+	#reveal-menu[type=checkbox]:checked~.mobile-menu {
+		display: block;
+		top: 200px;
+	}
+}
+
+/*================================================================================================================
+Content Area
+================================================================================================================*/
+/*@media (max-height: 1220px) {
+	#mainSidebar, #contentArea {
+		top: 192px;
+	}
+}
+*/
+#mainSidebar,
+#contentArea {
+	top: 175px;
+
+}
+
+/* @media (max-width: 885px) {
+
+	#mainSidebar,
+	#contentArea {
+		top: 175px;
+
+	}
+} */
+
+@media (max-width: 740px) {
+	#contentArea {
+		position: static;
+		margin-top: 166px;
+		width: 100%;
+	}
+
+	#mainSidebar {
+		position: static;
+		width: 94%;
+		padding: 10px 3%;
+		margin-bottom: 140px;
+	}
+}
+
+/*================================================================================================================
+Calendar plugin styling
+================================================================================================================*/
+#mainSidebar .simcal-calendar {
+	background-color: #fff;
+	border-radius: 3px;
+	color: #02224f;
+}
+
+#mainSidebar .simcal-calendar a {
+	color: var(--primary-color);
+}
+
+#mainSidebar .simcal-calendar a:hover {
+	color: var(--secondary-color);
+}
+
+#mainSidebar .simcal-calendar .simcal-event-title {
+	font-weight: bold;
+}
+
+#mainSidebar .simcal-calendar .simcal-current {
+	display: none;
+}
+
+#mainSidebar .simcal-default-calendar-dark .simcal-nav-button {
+	color: var(--primary-color);
+}
+
+#mainSidebar .simcal-default-calendar-list dt.simcal-day-label>span {
+	width: 94%;
+	color: var(--primary-color);
+}
+
+#mainSidebar .simcal-default-calendar-list .simcal-event-details {
+	border-bottom: 1px solid var(--primary-color);
+}
+
+#mainSidebar .simcal-default-calendar-list .simcal-event-details .simcal-event-description {
+	display: none;
+}
+
+/*#mainSidebar .simcal-default-calendar-list .simcal-event-details .simcal-event-start-date {display: none;} */
+.single-page .simcal-day-label {
+	background-color: var(--primary-color);
+}
+
+.single-page .simcal-present div {
+	border: 1px solid var(--secondary-color);
+}
+
+.single-page .simcal-present .simcal-day-label {
+	background-color: var(--secondary-color);
+}
+
+/*================================================================================================================
+ skip link styling
+ ================================================================================================================*/
+a.skip-to-menu,
+a.skip-to-content {
+	left: -999px;
+	position: absolute;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	z-index: -999;
+}
+
+a.skip-to-menu:focus,
+a.skip-to-menu:active,
+a.skip-to-content:focus,
+a.skip-to-content:active {
+	color: #fff;
+	background-color: var(--primary-color);
+	left: auto;
+	top: auto;
+	width: 20%;
+	height: auto;
+	overflow: auto;
+	margin: 10px 35%;
+	padding: 5px;
+	border-radius: 15px;
+	text-align: center;
+	font-size: 1.2em;
+	z-index: 9999;
+}
+
+/*================================================================================================================
+ TranslatePress Menu
+ ================================================================================================================*/
+#trp-floater-ls-current-language .trp-ls-disabled-language img {
+	max-width: 25px;
+	max-width: 25px;
+}
+
+.trp-language-switcher-container.trp-floater-ls-names.trp-top-right.trp-color-dark {
+	min-width: 25px;
+}

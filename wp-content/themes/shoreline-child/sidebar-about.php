@@ -2,6 +2,6 @@
 	<h1>School Information</h1>
 	<?php
 	$page_content = get_post(18322);
-	do_shortcode($page_content->post_content);
+	echo do_shortcode($page_content->post_content);
 	?>
 </aside>

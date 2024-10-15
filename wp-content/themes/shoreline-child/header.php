@@ -36,9 +36,9 @@
 
 <body>
 	<?php include_once("analyticstracking.php") ?>
-	<a class="skip-to-menu" href="#mainMenu">Skip to main menu</a>
-	<a class="skip-to-content" href="#contentArea">Skip to main content</a>
-
+	<a class="skip-to-link" href="#trp-floater-ls">Skip to Translation</a>
+	<a class="skip-to-link" href="#mainMenu">Skip to Main Menu</a>
+	<a class="skip-to-link" href="#contentArea">Skip to Main Content</a>
 	<header id="pcsdBranding">
 		<img src="<?php echo get_template_directory_uri() . '/assets/icons/pcsd-logo-website-header-branding.png' ?>" alt="Provo City School District Logo" />
 		<h1><a href="https://provo.edu">Provo City School District</a></h1>

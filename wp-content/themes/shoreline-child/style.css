@@ -573,39 +573,6 @@ Calendar plugin styling
 }
 
 /*================================================================================================================
- skip link styling
- ================================================================================================================*/
-a.skip-to-menu,
-a.skip-to-content {
-	left: -999px;
-	position: absolute;
-	top: auto;
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
-	z-index: -999;
-}
-
-a.skip-to-menu:focus,
-a.skip-to-menu:active,
-a.skip-to-content:focus,
-a.skip-to-content:active {
-	color: #fff;
-	background-color: var(--primary-color);
-	left: auto;
-	top: auto;
-	width: 20%;
-	height: auto;
-	overflow: auto;
-	margin: 10px 35%;
-	padding: 5px;
-	border-radius: 15px;
-	text-align: center;
-	font-size: 1.2em;
-	z-index: 9999;
-}
-
-/*================================================================================================================
  TranslatePress Menu
  ================================================================================================================*/
 #trp-floater-ls-current-language .trp-ls-disabled-language img {

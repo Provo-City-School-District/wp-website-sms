@@ -14,11 +14,18 @@
 Variables
 ================================================================================================================*/
 :root {
-	--primary-color: #1A2C36;
-	--secondary-color: #f57721;
-	--offset-color: #DFB553;
-	--grid-odd-clr: #e1e9f4;
-	--grid-even-clr: #cddbee;
+	--primary-color: #192C36;
+	--secondary-color: #E8C37D;
+	--accent-color: #DFB553;
+	--content-text: #02224f;
+	--link-color: #543D08;
+	--link-hover-color: #534D08;
+	--theme-white: #fff;
+	--theme-black: #000;
+	--theme-gray: #ccc;
+	--even-tile-bg-color: #e1e9f4;
+	--odd-tile-bg-color: #cddbee;
+
 }
 
 /*================================================================================================================
@@ -45,11 +52,12 @@ Theme specific coloring
 
 a {
 	text-decoration: none;
-	color: #45579c;
+	color: var(--link-color);
 }
 
 a:hover {
-	color: var(--secondary-color);
+	color: var(--link-hover-color);
+	text-decoration: underline;
 }
 
 nav>ul>li:hover>a {
@@ -57,7 +65,7 @@ nav>ul>li:hover>a {
 }
 
 #teacherAccess {
-	background-color: #324145;
+	background-color: var(--primary-color);
 }
 
 #mainHeader .contactinfo {
@@ -79,28 +87,28 @@ Post grid
 .searchResults .post:nth-child(even),
 .postgrid .post:nth-child(even),
 .staff-member-listing .personalvCard:nth-child(even) {
-	background-color: var(--grid-odd-clr);
+	background-color: var(--even-tile-bg-color);
 }
 
 .searchResults .post:nth-child(odd),
 .postgrid .post:nth-child(odd),
 .staff-member-listing .personalvCard:nth-child(odd) {
-	background-color: var(--grid-even-clr);
+	background-color: var(--odd-tile-bg-color);
 }
 
 #mainHeader #cludo-search-form .search-submit {
-	background-color: var(--primary-color);
+	background-color: var(--secondary-color);
 }
 
 /*=============================
 tile coloring
 ===============================*/
 .tiles .tile:nth-child(even) {
-	background-color: #e1e9f4;
+	background-color: var(--even-tile-bg-color);
 }
 
 .tiles .tile:nth-child(odd) {
-	background-color: #cddbee;
+	background-color: var(--odd-tile-bg-color);
 }
 
 /*============================
@@ -108,7 +116,7 @@ Fonts
 ===============================*/
 body {
 	font-family: Arial;
-	color: #02224f;
+	color: var(--content-text);
 }
 
 /*==================================================
@@ -119,8 +127,7 @@ h2,
 h3,
 h4 {
 	font-family: 'Arial Black', Arial;
-	/*font-weight: 800;*/
-	color: #02224f;
+	color: var(--primary-color);
 	line-height: 1.05em;
 }
 
@@ -144,11 +151,11 @@ h2 {
 }
 
 a h2 {
-	color: #45579c;
+	color: var(--primary-color);
 }
 
 a h2:hover {
-	color: var(--secondary-color);
+	color: var(--link-hover-color);
 }
 
 h3 {
@@ -174,7 +181,6 @@ header styles
 
 #mainHeader h1 {
 	position: absolute;
-	/* left: 127px; */
 	left: -9999px;
 	top: 8px;
 	color: #fff;
@@ -192,7 +198,6 @@ header styles
 }
 
 #mainHeader {
-	/*  background-image: url('https://timpview.provo.edu/wp-content/themes/timpview-child/assets/images/header-background.jpg'); */
 	background-color: var(--primary-color);
 }
 
@@ -237,100 +242,12 @@ header styles
 		display: block;
 		position: inherit;
 	}
-
-	/* #mainHeader #cludo-search-form .search-input,
-	#mainHeader #cludo-search-form .search-submit,
-	#mainHeader .sociallinks {
-		position: relative;
-		
-	} */
-
-}
-
-/* @media (max-width: 920px) {
-	#mainHeader .sociallinks {
-		display: none;
-	}
-
-} */
-
-@media (min-width: 850px) {
-	/* #mainHeader #siteLogo {
-		width: 545px;
-		margin-top: -20px;
-		margin-left: -45px;
-	} */
-}
-
-@media (max-width: 865px) {
-	/* #mainHeader aside {
-		position: absolute;
-
-		right: -10px;
-		top: 90px;
-		width: 80%
-	} */
 }
 
 @media (max-width: 800px) {
 	#contentArea {
 		margin-top: 175px;
 	}
-
-	/* #mainHeader {
-		padding: 0 0 0 0;
-	}
-
-	#mainHeader #siteLogo {
-		max-height: 65%;
-		padding: 0;
-		margin: 0 auto;
-
-		display: block;
-		position: inherit;
-	}
-
-	#mainHeader aside {
-		position: initial;
-		width: 100%;
-		text-align: center;
-	}
-
-	#mainHeader aside form {
-		height: auto;
-		max-height: 25px;
-
-	}
-
-	#mainHeader .search-input,
-	#mainHeader .search-submit,
-	#mainHeader #cludo-search-form .search-submit,
-	#mainHeader #cludo-search-form .search-input {
-		position: initial;
-		height: auto;
-		margin-top: 5px;
-	}
-
-	#mainHeader #cludo-search-form .search-input {
-		max-width: calc(100% - 100px);
-		margin-left: 25px;
-
-	}
-
-	#mainHeader #cludo-search-form .search-submit {
-		display: inline;
-		max-height: 25px;
-	}
-
-	#pcsdBranding h1 {
-		font-size: 15px;
-	}
-
-	#mainHeader .contactinfo {
-		width: 100%;
-		margin: 0;
-		text-align: center;
-	} */
 }
 
 @media (max-width: 600px) {
@@ -351,18 +268,18 @@ header styles
 Main Menu
 ================================================================================================================*/
 #mainMenu {
-	background-color: var(--primary-color);
+	background-color: var(--secondary-color);
 	font-family: 'Arial Black', Arial;
 	box-shadow: 1px 3px 5px var(--offset-color);
 	top: 147px;
 }
 
 #mainMenu>ul>li>a {
-	color: var(--offset-color);
+	color: var(--primary-color);
 }
 
 #mainMenu>ul>li>a:hover {
-	color: #fff;
+	color: var(--link-hover-color);
 }
 
 .mega-menu {
@@ -405,57 +322,6 @@ list icon color adjustments
 	list-style-image: url(../pcsd-2019-theme/assets/icons/external-white.png) !important;
 }
 
-/* @media (max-width: 1570px) {
-	#mainMenu>ul>li {
-		padding: 0 2.5%;
-	}
-}
-
-@media (max-width: 1500px) {
-	#mainMenu>ul>li {
-		padding: 0 2%;
-	}
-}
-
-@media (max-width: 1375px) {
-	#mainMenu>ul>li {
-		padding: 0 1.5%;
-	}
-}
-
-@media (max-width: 1292px) {
-	#mainMenu>ul>li {
-		padding: 0 1%;
-	}
-}
-
-@media (max-width: 1000px) {
-	#mainMenu>ul>li {
-		padding: 0 0.5%;
-	}
-} */
-
-/*@media (max-width: 1220px) {
-	#mainMenu > ul > li {
-		width: 30%;
-		padding: 0 1% 0 1%;
-	}
-	#mainMenu > ul > li:first-child {padding-left: 1%;}
-	.mega-menu {top: 192px;}
-}
-@media (max-width: 934px) {
-	#mainMenu > ul > li {
-		width: 32%;
-		padding: 0;
-	}
-	#mainMenu > ul > li:first-child {padding-left: 0;}
-	.desktop-menu {padding-left: 10px;}
-}*/
-/* @media (max-width: 1222px) {
-	#mainMenu > ul > li {
-		padding: 0 0.5%;
-	}
-} */
 @media (max-width: 1000px) {
 	.desktop-menu {
 		display: none;
@@ -467,7 +333,7 @@ list icon color adjustments
 
 	#mainMenu .mobileMenu {
 		display: block;
-		color: #fff;
+		color: var(--theme-white);
 		margin-left: 10px;
 		font-size: 16px;
 	}
@@ -481,26 +347,12 @@ list icon color adjustments
 /*================================================================================================================
 Content Area
 ================================================================================================================*/
-/*@media (max-height: 1220px) {
-	#mainSidebar, #contentArea {
-		top: 192px;
-	}
-}
-*/
+
 #mainSidebar,
 #contentArea {
 	top: 175px;
 
 }
-
-/* @media (max-width: 885px) {
-
-	#mainSidebar,
-	#contentArea {
-		top: 175px;
-
-	}
-} */
 
 @media (max-width: 740px) {
 	#contentArea {
@@ -518,12 +370,25 @@ Content Area
 }
 
 /*================================================================================================================
+sidebar Area
+================================================================================================================*/
+
+#mainSidebar a {
+	color: var(--theme-white);
+}
+
+#mainSidebar a:hover,
+.imagelist li a:hover span {
+	color: var(--link-hover-color);
+}
+
+/*================================================================================================================
 Calendar plugin styling
 ================================================================================================================*/
 #mainSidebar .simcal-calendar {
 	background-color: #fff;
 	border-radius: 3px;
-	color: #02224f;
+	color: var(--primary-color);
 }
 
 #mainSidebar .simcal-calendar a {

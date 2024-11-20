@@ -61,7 +61,7 @@ a:hover {
 }
 
 nav>ul>li:hover>a {
-	color: #69aae0;
+	color: var(--link-hover-color);
 }
 
 #teacherAccess {
@@ -183,7 +183,7 @@ header styles
 	position: absolute;
 	left: -9999px;
 	top: 8px;
-	color: #fff;
+	color: var(--theme-white);
 	font-family: 'Arial Black', Arial;
 	font-weight: 800;
 }
@@ -386,7 +386,7 @@ sidebar Area
 Calendar plugin styling
 ================================================================================================================*/
 #mainSidebar .simcal-calendar {
-	background-color: #fff;
+	background-color: var(--theme-white);
 	border-radius: 3px;
 	color: var(--primary-color);
 }
@@ -424,7 +424,6 @@ Calendar plugin styling
 	display: none;
 }
 
-/*#mainSidebar .simcal-default-calendar-list .simcal-event-details .simcal-event-start-date {display: none;} */
 .single-page .simcal-day-label {
 	background-color: var(--primary-color);
 }

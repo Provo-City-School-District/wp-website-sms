@@ -198,7 +198,8 @@ header styles
 }
 
 #mainHeader {
-	background-color: var(--theme-white);
+	background-color: var(--primary-color);
+	color: var(--theme-white);
 }
 
 #mainHeader .contactinfo li span.phone,

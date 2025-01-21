@@ -78,10 +78,8 @@
 			<!-- End Contact Information -->
 		</aside>
 		<nav id="mainMenu" role="navigation">
-			<input type="checkbox" id="reveal-menu" role="button">
-			<label class="mobileMenu" for="reveal-menu" onclick><img src="<?php echo get_template_directory_uri() . '/assets/icons/menu.svg'; ?>" alt="" />Menu</label>
-			<?php
-			get_template_part('mainmenu');
-			?>
+			<input type="checkbox" id="reveal-menu" role="button" aria-labelledby="menu-label">
+			<label id="menu-label" class="mobileMenu" for="reveal-menu"><img src="<?php echo get_template_directory_uri() . '/assets/icons/menu.svg'; ?>" alt="" />Menu</label>
+			<?php get_template_part('mainmenu'); ?>
 		</nav>
 	</header>

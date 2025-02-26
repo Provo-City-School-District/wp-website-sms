@@ -35,7 +35,6 @@
 </head>
 
 <body>
-	<?php include_once("analyticstracking.php") ?>
 	<a class="skip-to-link" href="#trp-floater-ls">Skip to Translation</a>
 	<a class="skip-to-link" href="#mainMenu">Skip to Main Menu</a>
 	<a class="skip-to-link" href="#contentArea">Skip to Main Content</a>

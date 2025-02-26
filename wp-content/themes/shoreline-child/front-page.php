@@ -33,7 +33,7 @@
 			// echo '<p>No Slides</p>';
 
 			endif;
-			wp_reset_query();
+			wp_reset_postdata();
 			?>
 		</div>
 	</section>
